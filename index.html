@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szerelmemnek</title>
+    <title>Szerelem története</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Szerelmemnek</h1>
-            <p>Te vagy a napfény az életemben, és ezt az oldalt neked szenteltem.</p>
-            <a href="#story" class="btn">Fedezd fel</a>
+    <header>
+        <h1>Szabolcs és Alexandra nagy napja</h1>
+        <div class="header-image">
+            <img src="heart-flower.png" alt="Szív alakú virág dekoráció">
         </div>
     </header>
-    <main>
-        <section id="story" class="story">
-            <h2>A mi történetünk</h2>
-            <p>Egy nap találkoztunk, és minden megváltozott. Azóta te vagy az, aki mosolyt csal az arcomra, és boldoggá teszi a napjaimat.</p>
-        </section>
-        <section class="gallery">
-            <h2>Kedvenc pillanataink</h2>
-            <div class="image-grid">
-                <img src="https://via.placeholder.com/300" alt="Pillanat 1">
-                <img src="https://via.placeholder.com/300" alt="Pillanat 2">
-                <img src="https://via.placeholder.com/300" alt="Pillanat 3">
-            </div>
-        </section>
-        <section class="contact">
-            <h2>Üzenet neked</h2>
-            <p>Mindig itt leszek melletted, és soha nem hagylak el. Szeretlek!</p>
-        </section>
-    </main>
+    <section>
+        <h2>Szerelmünk története</h2>
+        <p>Itt kezdődhet a szöveged. Kattints ide, és kezdheted is az írást...</p>
+        <img src="couple1.jpg" alt="Pár mosolyogva a tengerparton">
+    </section>
+    <section>
+        <h2>Várjuk, hogy találkozhassunk</h2>
+        <p><strong>Mikor</strong></p>
+        <p>Péntek, 14:15 és Szombat, 12:15</p>
+        <p><strong>Hol</strong></p>
+        <p>Szentháromság Kápolna, 1013 Budapest, Clark Ádám tér 1.</p>
+        <div id="countdown">
+            <h3>Visszaszámlálás:</h3>
+            <p id="timer"></p>
+        </div>
+    </section>
+    <section>
+        <h2>Üzenetem</h2>
+        <textarea placeholder="Hagyj üzenetet..."></textarea>
+        <button>Küldés</button>
+    </section>
     <footer>
-        <p>Készítette: A te szerelmed</p>
+        <p>© 2024 Szabolcs és Alexandra. Minden jog fenntartva.</p>
+        <p>Az oldalt a Webnode működteti.</p>
     </footer>
 </body>
 </html>
