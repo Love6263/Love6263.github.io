@@ -20,7 +20,9 @@ const updateCountdown = () => {
     }
 
     if (distance < 0) {
-        countdownElement.innerHTML = "Az események véget értek!";
+        // Itt már nem az "események véget értek" szöveget jelenítjük meg,
+        // hanem a következő eseményről írunk.
+        countdownElement.innerHTML = "A találkozóidő elérkezett!";
         locationElement.innerHTML = "";
         clearInterval(interval);
     } else {
@@ -32,9 +34,9 @@ const updateCountdown = () => {
         countdownElement.innerHTML = `Még ${days} nap ${hours} óra ${minutes} perc és ${seconds} másodperc van a találkozónkig!`;
 
         if (currentEvent === 0) {
-            locationElement.innerHTML = `Pénteken 14:15 - Hejobába Iskola<br>Várunk téged, mindössze ${days} nap, ${hours} óra, ${minutes} perc és ${seconds} másodperc múlva!`;
+            locationElement.innerHTML = `<strong style="color: #ff4d4d;">Pénteken 14:15 - Hejobába Iskola</strong><br>Várunk téged, mindössze <span style="color: #ff6666;">${days} nap, ${hours} óra, ${minutes} perc</span> múlva!`;
         } else {
-            locationElement.innerHTML = `Szombaton 12:15 - Nemesbikk<br>Várunk téged, mindössze ${days} nap, ${hours} óra, ${minutes} perc és ${seconds} másodperc múlva!`;
+            locationElement.innerHTML = `<strong style="color: #ff4d4d;">Szombaton 12:15 - Nemesbikk</strong><br>Várunk téged, mindössze <span style="color: #ff6666;">${days} nap, ${hours} óra, ${minutes} perc</span> múlva!`;
         }
     }
 };
