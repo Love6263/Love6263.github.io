@@ -1,15 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fdf5e6;
+    background-color: #f8f4f0;
     color: #333;
 }
 
 /* Fejléc stílusok */
 header {
-    background: #ff9999;
+    background: #f8c9b6;
     color: white;
     padding: 20px;
     text-align: center;
