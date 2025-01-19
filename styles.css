@@ -57,6 +57,16 @@ section img {
     font-weight: bold;
 }
 
+/* Helyszín és információ */
+#location {
+    font-size: 1.3em;
+    color: #ff4d4d;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Üzenetem mező */
 textarea {
     width: 100%;
