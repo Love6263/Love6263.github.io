@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szerelem története</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +21,8 @@
     <section>
         <h2>Várjuk, hogy találkozhassunk</h2>
         <p><strong>Mikor</strong></p>
-        <p>Péntek, 14:15 és Szombat, 12:15</p>
+        <p>Péntek, 14:15 - Hejobába Iskola</p>
+        <p>Szombat, 12:15 - Nemesbikk</p>
         <p><strong>Hol</strong></p>
         <p>Szentháromság Kápolna, 1013 Budapest, Clark Ádám tér 1.</p>
         <div id="countdown">
@@ -32,12 +32,16 @@
     </section>
     <section>
         <h2>Üzenetem</h2>
-        <textarea placeholder="Hagyj üzenetet..."></textarea>
-        <button>Küldés</button>
+        <form action="send_email.php" method="POST">
+            <textarea name="message" placeholder="Hagyj üzenetet..." required></textarea>
+            <button type="submit">Küldés</button>
+        </form>
     </section>
     <footer>
         <p>© 2024 Szabolcs és Alexandra. Minden jog fenntartva.</p>
         <p>Az oldalt a Webnode működteti.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
