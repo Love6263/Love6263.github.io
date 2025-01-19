@@ -1,6 +1,7 @@
 const countdownElement = document.getElementById('timer');
+const locationElement = document.getElementById('location');
 
-// Péntek 14:15 és szombat 12:15
+// Péntek 14:15 és szombat 12:15 dátumok
 const eventDates = [
     new Date("2025-01-19T14:15:00").getTime(),  // Péntek 14:15
     new Date("2025-01-20T12:15:00").getTime()   // Szombat 12:15
@@ -20,13 +21,21 @@ const updateCountdown = () => {
 
     if (distance < 0) {
         countdownElement.innerHTML = "Az események véget értek!";
+        locationElement.innerHTML = "";
         clearInterval(interval);
     } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML = `Még ${days} nap ${hours} óra ${minutes} perc van a találkozónkig!`;
+        countdownElement.innerHTML = `Még ${days} nap ${hours} óra ${minutes} perc és ${seconds} másodperc van a találkozónkig!`;
+
+        if (currentEvent === 0) {
+            locationElement.innerHTML = `Pénteken 14:15 - Hejobába Iskola<br>Várunk téged, mindössze ${days} nap, ${hours} óra, ${minutes} perc és ${seconds} másodperc múlva!`;
+        } else {
+            locationElement.innerHTML = `Szombaton 12:15 - Nemesbikk<br>Várunk téged, mindössze ${days} nap, ${hours} óra, ${minutes} perc és ${seconds} másodperc múlva!`;
+        }
     }
 };
 
