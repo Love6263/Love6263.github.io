@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szerelem. története</title>
+    <title>Szerelem története</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,25 +13,38 @@
             <img src="heart-flower.png" alt="Szív alakú virág dekoráció">
         </div>
     </header>
+
     <section>
         <h2>Szerelmünk története</h2>
         <p>Itt kezdődhet a szöveged. Kattints ide, és kezdheted is az írást...</p>
         <img src="couple1.jpg" alt="Pár mosolyogva a tengerparton">
     </section>
+
     <section>
         <h2>Várjuk, hogy találkozhassunk</h2>
-        <p id="location"></p> <!-- Helyszín és időpont szövege -->
+        <p id="location"></p>
         <div id="countdown">
             <h3>Visszaszámlálás:</h3>
             <p id="timer"></p>
         </div>
     </section>
+
+    <section>
+        <h2>Romantikus Kép</h2>
+        <div class="romantic-image" id="romanticImage">
+            <img src="https://www.facebook.com/photo.php?fbid=352325621265879" alt="Szabolcs és Alexandra">
+            <div id="heartContainer"></div>
+        </div>
+        <p><i>Szabolcs és Alexandra - Együtt örökké!</i></p>
+    </section>
+
     <section>
         <h2>Megható szerelmes idézet</h2>
         <blockquote>
             "A szerelem nem egy érzés, hanem egy döntés. Az a döntés, hogy minden nap melletted állok, és veled együtt építem a jövőnket. Mert te vagy az én örök nyaram, akivel minden pillanatom teljes."
         </blockquote>
     </section>
+
     <section>
         <h2>Üzenetem</h2>
         <form action="send_email.php" method="POST">
@@ -39,6 +52,7 @@
             <button type="submit">Küldés</button>
         </form>
     </section>
+
     <footer>
         <p>© 2024 Szabolcs és Alexandra. Minden jog fenntartva.</p>
         <p>Az oldalt a Webnode működteti.</p>
