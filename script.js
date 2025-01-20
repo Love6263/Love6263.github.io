@@ -1,5 +1,7 @@
 const countdownElement = document.getElementById('timer');
 const locationElement = document.getElementById('location');
+const romanticImage = document.getElementById('romanticImage');
+const heartContainer = document.getElementById('heartContainer');
 
 // Péntek 14:15 és szombat 12:15 dátumok
 const eventDates = [
@@ -15,13 +17,10 @@ const updateCountdown = () => {
     const distance = eventDates[currentEvent] - now;
 
     if (distance < 0 && currentEvent < eventDates.length - 1) {
-        // Ha az első esemény megtörtént, a következő eseményre váltunk
         currentEvent++;
     }
 
     if (distance < 0) {
-        // Itt már nem az "események véget értek" szöveget jelenítjük meg,
-        // hanem a következő eseményről írunk.
         countdownElement.innerHTML = "A találkozóidő elérkezett!";
         locationElement.innerHTML = "";
         clearInterval(interval);
@@ -42,3 +41,14 @@ const updateCountdown = () => {
 };
 
 const interval = setInterval(updateCountdown, 1000);
+
+// Kép kattintás szívecskékhez
+romanticImage.addEventListener('click', () => {
+    heartContainer.innerHTML = '';
+    for (let i = 0; i < 5; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heartContainer.appendChild(heart);
+    }
+    heartContainer.style.visibility = 'visible';
+});
